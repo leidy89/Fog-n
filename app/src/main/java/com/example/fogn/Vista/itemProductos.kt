@@ -4,6 +4,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
@@ -13,11 +15,15 @@ import com.example.fogn.R
 
 
 @Composable
-fun itemProductos (){
+fun itemProductos (productos:Productos){
+   a
 
     Row()
     {
-        Image(painter= painterResource(R.drawable.baseline_image_24),contentDescription="Imagen")
+        Image(painter= painterResource(productos.imagenProducto),contentDescription="Imagen")
         Spacer(modifier=Modifier.width(30.dp))
+        Text(" ${productos.nombreProducto}")
+        Spacer(modifier = Modifier.width(30.dp))
+        Text("${productos.precioProducto}")
     }
 }
